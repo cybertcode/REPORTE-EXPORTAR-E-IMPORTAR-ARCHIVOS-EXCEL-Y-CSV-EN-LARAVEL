@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Envoice;
-use App\Http\Requests\StoreEnvoiceRequest;
-use App\Http\Requests\UpdateEnvoiceRequest;
+use App\Models\Invoice;
+use App\Http\Requests\StoreInvoiceRequest;
+use App\Http\Requests\UpdateInvoiceRequest;
 
-class EnvoiceController extends Controller
+class InvoiceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class EnvoiceController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreEnvoiceRequest $request)
+    public function store(StoreInvoiceRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class EnvoiceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Envoice $envoice)
+    public function show(Invoice $invoice)
     {
         //
     }
@@ -43,7 +43,7 @@ class EnvoiceController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Envoice $envoice)
+    public function edit(Invoice $invoice)
     {
         //
     }
@@ -51,7 +51,7 @@ class EnvoiceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateEnvoiceRequest $request, Envoice $envoice)
+    public function update(UpdateInvoiceRequest $request, Invoice $invoice)
     {
         //
     }
@@ -59,7 +59,7 @@ class EnvoiceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Envoice $envoice)
+    public function destroy(Invoice $invoice)
     {
         //
     }
