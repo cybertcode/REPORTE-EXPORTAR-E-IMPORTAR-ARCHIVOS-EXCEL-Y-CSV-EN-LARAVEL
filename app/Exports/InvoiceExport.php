@@ -8,11 +8,12 @@ use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithColumnFormatting;
 use Maatwebsite\Excel\Concerns\WithCustomStartCell;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Excel;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
 
-class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable, WithMapping, WithColumnFormatting
+class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable, WithMapping, WithColumnFormatting, WithHeadings
 {
     use Exportable;
     private $filters;
@@ -31,6 +32,19 @@ class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable,
     public function startCell(): string
     {
         return 'A5';
+    }
+    // ES imprescindible definir este método para evitar error de WithHeadings
+    public function headings(): array
+    {
+        return [
+            'serie',
+            'Correlativo',
+            'Base',
+            'IGV',
+            'Total',
+            'Usuario',
+            'Creado',
+        ];
     }
     // ES imprescindible definir este método para evitar error de WithMapping
     public function map($invoice): array
