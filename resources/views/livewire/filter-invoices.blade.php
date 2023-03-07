@@ -1,17 +1,55 @@
-<!--
-  This example requires Tailwind CSS v2.0+
-
-  The alpine.js code is *NOT* production ready and is included to preview
-  possible interactivity
--->
 <div class="py-10 bg-gray-100">
+    {{-- @dump($filters) --}}
     <div class="mx-auto max-w-7xl">
-
         <div class="px-4 sm:px-6 lg:px-8">
+            {{-- Filtro --}}
+            <div class=" space-x-4 mb-4">
+                <div class="">
+                    <label for="location" class="block text-sm font-medium text-gray-700">Serie:</label>
+                    <select id="location" name="location" wire:model='filters.serie'
+                        class="mt-1 block  rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                        <option value="" selected>Todos</option>
+                        <option value="F001">F001</option>
+                        <option value="B001">B001</option>
+                    </select>
+                </div>
+                <div class="float-right">
+                    <x-button wire:click="clear" class="bg-red-600">Limpiar</x-button>
+                </div>
+            </div>
+
+            <div class="flex space-x-4 mb-4">
+                <div>
+                    Desde el N°:
+                    <x-input wire:model="filters.fromNumber" type="text" class="w-20"></x-input>
+                </div>
+                <div>
+                    Hasta el N°:
+                    <x-input wire:model="filters.toNumber" type="text" class="w-20" />
+                </div>
+            </div>
+            <div class="flex space-x-4 mb-4">
+                <div>
+                    Desde fecha:
+                    <x-input wire:model="filters.fromDate" type="date" class="w-42"></x-input>
+                </div>
+                <div>
+                    Hasta fecha:
+                    <x-input wire:model="filters.toDate" type="date" class="w-42" />
+                </div>
+            </div>
+            <x-button wire:click="generateReport">Generar reporte</x-button>
+            {{-- /**************
+             * fin filtro *
+             **************/ --}}
+        </div>
+        <div class="px-4 sm:px-6 lg:px-8">
+
             <div class="sm:flex sm:items-center">
                 <div class="sm:flex-auto">
                     <h1 class="text-xl font-semibold text-gray-900">Users</h1>
-                    <p class="mt-2 text-sm text-gray-700">A list of all the users in your account including their name,
+                    <p class="mt-2 text-sm text-gray-700">A list of all the users in your account including their
+                        name,
                         title, email and role.</p>
                 </div>
                 <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
@@ -26,7 +64,8 @@
                     <thead class="bg-gray-50">
                         <tr>
                             <th scope="col"
-                                class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">ID</th>
+                                class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">ID
+                            </th>
                             <th scope="col"
                                 class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Serie
                             </th>
@@ -38,9 +77,11 @@
                                 Base</th>
                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">IGV
                             </th>
-                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Total
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                Total
                             </th>
-                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Fecha
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                Fecha
                             </th>
                             <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                                 <span class="sr-only">Acciones</span>
@@ -52,19 +93,23 @@
                             <tr>
                                 <td class="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">{{ $invoice->id }}
                                 </td>
-                                <td class="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">{{ $invoice->serie }}
+                                <td class="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">
+                                    {{ $invoice->serie }}
                                 </td>
                                 <td class="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">
                                     {{ $invoice->correlative }}
                                 </td>
-                                <td class="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">S/ {{ $invoice->base }}
+                                <td class="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">S/
+                                    {{ $invoice->base }}
                                 </td>
-                                <td class="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">S/ {{ $invoice->igv }}
+                                <td class="hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">S/
+                                    {{ $invoice->igv }}
                                 </td>
                                 <td class="hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">
                                     S/ {{ $invoice->total }}
                                 </td>
-                                <td class="px-3 py-4 text-sm text-gray-500">{{ $invoice->created_at->format('d-m-Y') }}
+                                <td class="px-3 py-4 text-sm text-gray-500">
+                                    {{ $invoice->created_at->format('d-m-Y') }}
                                 </td>
                                 <td class="py-4 pl-3 pr-4 text-sm font-medium text-right sm:pr-6">
                                     <a href="#" class="text-indigo-600 hover:text-indigo-900">Editar<span
@@ -80,10 +125,11 @@
                     </tbody>
                 </table>
             </div>
+            <div class="mt-4">
+                {{ $invoices->links('vendor.pagination.tailwind') }}
+            </div>
         </div>
-        <div class="mt-4">
-            {{ $invoices->links() }}
-        </div>
+
     </div>
 
 </div>
