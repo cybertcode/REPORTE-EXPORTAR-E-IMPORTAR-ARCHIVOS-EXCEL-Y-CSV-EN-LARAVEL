@@ -10,12 +10,13 @@ use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithColumnFormatting;
 use Maatwebsite\Excel\Concerns\WithColumnWidths;
 use Maatwebsite\Excel\Concerns\WithCustomStartCell;
+use Maatwebsite\Excel\Concerns\WithDrawings;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Excel;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
 
-class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable, WithMapping, WithColumnFormatting, WithHeadings, WithColumnWidths
+class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable, WithMapping, WithColumnFormatting, WithHeadings, WithColumnWidths, WithDrawings
 {
     use Exportable;
     private $filters;
@@ -82,5 +83,17 @@ class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable,
             'F' => 30,
             'G' => 15,
         ];
+    }
+    // ES imprescindible definir este método para evitar error de WithDrawings
+    public function drawings()
+    {
+        $drawings = new \PhpOffice\PhpSpreadsheet\Worksheet\Drawing();
+        $drawings->setName('MKEVYN HH');
+        $drawings->setDescription('MI LOGO');
+        $drawings->setPath(public_path('img/logos/logo.png'));
+        $drawings->setHeight(90);
+        $drawings->setCoordinates('B2');
+        return $drawings;
+
     }
 }
