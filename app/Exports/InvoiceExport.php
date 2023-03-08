@@ -6,14 +6,16 @@ use App\Models\Invoice;
 use Illuminate\Contracts\Support\Responsable;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromCollection;
+// use Maatwebsite\Excel\Concerns\ShouldAutoSize; columa automático
 use Maatwebsite\Excel\Concerns\WithColumnFormatting;
+use Maatwebsite\Excel\Concerns\WithColumnWidths;
 use Maatwebsite\Excel\Concerns\WithCustomStartCell;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Excel;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
 
-class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable, WithMapping, WithColumnFormatting, WithHeadings
+class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable, WithMapping, WithColumnFormatting, WithHeadings, WithColumnWidths
 {
     use Exportable;
     private $filters;
@@ -68,4 +70,17 @@ class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable,
         ];
     }
 
+    // ES imprescindible definir este método para evitar error de WithColumnWidths
+    public function columnWidths(): array
+    {
+        return [
+            'A' => 10,
+            'B' => 10,
+            'C' => 10,
+            'D' => 10,
+            'E' => 10,
+            'F' => 30,
+            'G' => 15,
+        ];
+    }
 }
