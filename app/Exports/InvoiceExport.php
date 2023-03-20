@@ -13,10 +13,12 @@ use Maatwebsite\Excel\Concerns\WithCustomStartCell;
 use Maatwebsite\Excel\Concerns\WithDrawings;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
+use Maatwebsite\Excel\Concerns\WithStyles;
 use Maatwebsite\Excel\Excel;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
+use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
-class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable, WithMapping, WithColumnFormatting, WithHeadings, WithColumnWidths, WithDrawings
+class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable, WithMapping, WithColumnFormatting, WithHeadings, WithColumnWidths, WithDrawings, WithStyles
 {
     use Exportable;
     private $filters;
@@ -34,7 +36,7 @@ class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable,
     // ES imprescindible definir este método para evitar error DE WithCustomStartCell
     public function startCell(): string
     {
-        return 'A5';
+        return 'A10';
     }
     // ES imprescindible definir este método para evitar error de WithHeadings
     public function headings(): array
@@ -94,6 +96,59 @@ class InvoiceExport implements FromCollection, WithCustomStartCell, Responsable,
         $drawings->setHeight(90);
         $drawings->setCoordinates('B2');
         return $drawings;
+
+    }
+    // ES imprescindible definir este método para evitar error de WithStyles
+    public function styles(Worksheet $sheet)
+    {
+        $sheet->setTitle('Invoices');
+        // $sheet->mergeCells('B8:F8'); combinar celdas
+        // Un conjunto de celdas
+        /*************
+         * OPCIÓN 01 *
+         *************/
+        $sheet->getStyle('A10:G10')->applyFromArray([
+            'font' => ['bold' => true, 'name' => 'Arial'],
+            'alignment' => ['horizontal' => 'center'],
+            'fill' => [
+                'fillType' => 'solid',
+                'startColor' => ['argb' => 'C5D9F1'],
+            ],
+        ]);
+        // Bordes de celdas
+        $sheet->getStyle('A10:G' . $sheet->getHighestRow())->applyFromArray([
+            'borders' => [
+                'allBorders' => [
+                    'borderStyle' => 'thin',
+                ],
+            ],
+        ]);
+        // Para ubicar el cursor en la celda
+        $sheet->getStyle('A11')->applyFromArray([]);
+        /*****************
+         * FIN OPCIÓN 01 *
+         *****************/
+        /*************
+         * OPCIÓN 02 *
+         *************/
+        return [
+            'A10:G10' => [
+                'font' => ['bold' => true, 'name' => 'Arial'],
+                'alignment' => ['horizontal' => 'center'],
+                'fill' => [
+                    'fillType' => 'solid',
+                    'startColor' => ['argb' => 'C5D9F1']
+                ]
+            ],
+            'A10:G' . $sheet->getHighestRow() => [
+                'borders' => [
+                    'allBorders' => [
+                        'borderStyle' => 'thin',
+                    ],
+                ],
+            ],
+            'A11' => [],
+        ];
 
     }
 }
