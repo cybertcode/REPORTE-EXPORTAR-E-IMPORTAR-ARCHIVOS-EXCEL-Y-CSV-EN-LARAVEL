@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Invoice;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreInvoiceRequest;
 use App\Http\Requests\UpdateInvoiceRequest;
-use App\Models\Invoice;
 
 class InvoiceController extends Controller
 {
@@ -35,9 +36,12 @@ class InvoiceController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreInvoiceRequest $request)
+    public function importStore(Request $request)
     {
-        //
+        $request->validate([
+            'file' => 'required|mimes:csv,xlsx'
+        ]);
+        return "success";
     }
 
     /**

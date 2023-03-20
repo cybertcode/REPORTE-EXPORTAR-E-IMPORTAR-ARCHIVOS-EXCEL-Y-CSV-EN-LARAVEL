@@ -15,5 +15,8 @@
         "postcss": "^8.4.14",
         "tailwindcss": "^3.2.7",
         "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "gitmoji-cli": "^8.0.0"
     }
 }
