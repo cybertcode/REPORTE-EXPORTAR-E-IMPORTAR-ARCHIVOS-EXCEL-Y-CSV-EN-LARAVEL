@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Invoice;
 use Illuminate\Http\Request;
+use App\Imports\InvoiceImport;
+use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Requests\StoreInvoiceRequest;
 use App\Http\Requests\UpdateInvoiceRequest;
 
@@ -41,6 +44,9 @@ class InvoiceController extends Controller
         $request->validate([
             'file' => 'required|mimes:csv,xlsx'
         ]);
+        // return Excel::toCollection(new InvoiceImport, $file); para verificar que tipo de datos nos trae y su presentación
+        $file = $request->file('file');
+        Excel::import(new InvoiceImport, $file);
         return "success";
     }
 

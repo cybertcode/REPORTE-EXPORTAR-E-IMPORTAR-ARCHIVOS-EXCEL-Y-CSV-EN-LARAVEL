@@ -15,7 +15,7 @@ class Invoice extends Model
      *
      * @var array
      */
-    protected $fillable = ['serie', 'correlative', 'base', 'igv', 'total', 'user_id'];
+    protected $fillable = ['serie', 'correlative', 'base', 'igv', 'total', 'user_id', 'created_at'];
     // Query scopes
     public function scopeFilter($query, $filters)
     {
