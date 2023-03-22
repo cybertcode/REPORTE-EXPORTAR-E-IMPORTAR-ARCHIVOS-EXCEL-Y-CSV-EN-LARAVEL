@@ -8,7 +8,7 @@
 <h3 align="center">Filtros avanzados</h3>
 <p align="center">
   <a href="" rel="noopener">
- <img width=800px  src="/importar.png.png" alt="Project logo"></a>
+ <img width=800px  src="/importar.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Importar y exportat</h3>
@@ -31,13 +31,9 @@
 ## 📝 Tabla de contenido
 
 -   [Primeros pasos](#getting_started)
--   [Deployment](#deployment)
--   [Usage](#usage)
--   [Built Using](#built_using)
--   [TODO](../TODO.md)
+-   [Uso](#usage)
 -   [Contributing](../CONTRIBUTING.md)
 -   [Authors](#authors)
--   [Acknowledgments](#acknowledgement)
 
 ## 🏁 Primeros pasos <a name = "getting_started"></a>
 
@@ -56,10 +52,13 @@ laravel new reportes
 Seguir los siquientes pasos consecutivos
 
 ```
-[git clone](https://gitlab.com/backend-laravel2/reportes-excel)
+[git clone https://gitlab.com/backend-laravel2/reportes-excel
 ```
 
 ## 🎈 Uso <a name="usage"></a>
+
+#Crear tu base de datos
+#FILESYSTEM_DISK=public
 
 ```
 composer install
@@ -67,6 +66,8 @@ cp .env.example .env
 php artisan key:generate
 php artisan migrate
 php artisan db:seed
+php artisan serve
+npm run dev
 ```
 
 ## 🚀 Deployment <a name = "deployment"></a>
@@ -76,8 +77,6 @@ php artisan db:seed
 -   [@cybert22](https://gitlab.com/cybert22) - Idea & Initial work
 
 See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 -   Hat tip to anyone whose code was used
 -   Inspiration
