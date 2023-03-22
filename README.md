@@ -1,9 +1,15 @@
+## REPORTE | IMPORTAR E IMPORTAR ARCHIVOS EXCEL Y CSV CON LARAVEL 10
+
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="/filtros.png" alt="Project logo"></a>
+ <img width=900px  src="/filtros.png" alt="Project logo"></a>
 </p>
-
-<h3 align="center">undefined</h3>
+<h3 align="center">Filtros avanzados</h3>
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=900px  src="/importar.png" alt="Project logo"></a>
+</p>
+<h3 align="center">Importar y Exportar</h3>
 
 <div align="center">
 
@@ -16,98 +22,63 @@
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> Exportar e Importar archivos excel con laravel 10.
     <br>
 </p>
 
-## 📝 Table of Contents
+## 📝 Tabla de contenido
 
--   [About](#about)
--   [Getting Started](#getting_started)
--   [Deployment](#deployment)
--   [Usage](#usage)
--   [Built Using](#built_using)
--   [TODO](../TODO.md)
--   [Contributing](../CONTRIBUTING.md)
--   [Authors](#authors)
--   [Acknowledgments](#acknowledgement)
+-   [Primeros pasos](#getting_started)
+-   [Uso](#usage)
+-   [Contribución](../CONTRIBUTING.md)
+-   [Autor](#authors)
 
-## 🧐 About <a name = "about"></a>
+## 🏁 Primeros pasos <a name = "getting_started"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+-   Seguir los siguientes pasos para levantar el proyecto
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+### Prerequisitos
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
+-   es necesario conocer del stack TALL en nivel básico
 
 ```
-Give examples
+laravel new reportes-excel
 ```
 
-### Installing
+### Instalar
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
+-   Seguir los siquientes pasos consecutivos
 
 ```
-Give the example
+git clone https://gitlab.com/backend-laravel2/reportes-excel
 ```
 
-And repeat
+## 🎈 Uso <a name="usage"></a>
+
+-   Crear tu base de datos
+-   Cambiar el driver de local a public
 
 ```
-until finished
+# FILESYSTEM_DISK=public
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+-   En el terminal
 
 ```
-Give an example
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+php artisan serve
+npm run dev
 ```
 
-### And coding style tests
+## ✍️ Autor <a name = "authors"></a>
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## 🎈 Usage <a name="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a name = "built_using"></a>
-
--   [MongoDB](https://www.mongodb.com/) - Database
--   [Express](https://expressjs.com/) - Server Framework
--   [VueJs](https://vuejs.org/) - Web Framework
--   [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a name = "authors"></a>
-
--   [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+-   [@cybert22](https://gitlab.com/cybert22) - Programando o debbugeando
 
 See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 -   Hat tip to anyone whose code was used
 -   Inspiration
