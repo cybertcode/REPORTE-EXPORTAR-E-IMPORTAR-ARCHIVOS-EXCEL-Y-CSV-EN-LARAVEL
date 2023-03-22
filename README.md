@@ -2,16 +2,14 @@
 
 <p align="center">
   <a href="" rel="noopener">
- <img width=800px  src="/filtros.png" alt="Project logo"></a>
+ <img width=900px  src="/filtros.png" alt="Project logo"></a>
 </p>
-
 <h3 align="center">Filtros avanzados</h3>
 <p align="center">
   <a href="" rel="noopener">
- <img width=800px  src="/importar.png" alt="Project logo"></a>
+ <img width=900px  src="/importar.png" alt="Project logo"></a>
 </p>
-
-<h3 align="center">Importar y exportat</h3>
+<h3 align="center">Importar y Exportar</h3>
 
 <div align="center">
 
@@ -52,13 +50,14 @@ laravel new reportes
 Seguir los siquientes pasos consecutivos
 
 ```
-[git clone https://gitlab.com/backend-laravel2/reportes-excel
+git clone https://gitlab.com/backend-laravel2/reportes-excel
 ```
 
 ## 🎈 Uso <a name="usage"></a>
 
-#Crear tu base de datos
-#FILESYSTEM_DISK=public
+# Crear tu base de datos
+
+# FILESYSTEM_DISK=public
 
 ```
 composer install
@@ -69,8 +68,6 @@ php artisan db:seed
 php artisan serve
 npm run dev
 ```
-
-## 🚀 Deployment <a name = "deployment"></a>
 
 ## ✍️ Authors <a name = "authors"></a>
 
