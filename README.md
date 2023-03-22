@@ -1,9 +1,9 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="/filtros.png" alt="Project logo"></a>
+ <img width=600px  src="/filtros.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">undefined</h3>
+<h3 align="center">Filtros avanzados</h3>
 
 <div align="center">
 
