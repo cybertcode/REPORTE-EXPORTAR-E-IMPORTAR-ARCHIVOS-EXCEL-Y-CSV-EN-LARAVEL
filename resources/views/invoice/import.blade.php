@@ -4,9 +4,12 @@
             Importar facturas
         </h2>
     </x-slot>
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            @if (session()->has('success'))
+                @include('invoice.alerts')
+            @endif
+            <hr>
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
                     <form action="{{ route('invoice.importStore') }}" method="POST" enctype="multipart/form-data">

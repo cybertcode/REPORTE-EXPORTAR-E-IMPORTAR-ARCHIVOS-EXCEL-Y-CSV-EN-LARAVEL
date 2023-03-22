@@ -18,7 +18,6 @@ class FilterInvoices extends Component
         'fromDate' => '',
         'toDate' => '',
     ];
-
     public function render()
     {
         $invoices = Invoice::filter($this->filters)->paginate(10);
@@ -30,11 +29,14 @@ class FilterInvoices extends Component
     }
     public function generateReport()
     {
-        return new InvoiceExport($this->filters);
+        $export = new InvoiceExport($this->filters);
         // return Excel::download(new InvoiceExport(), 'Invoices.xlsx'); //PARA EXCEL
         // return Excel::download(new InvoiceExport(), 'Invoices.csv', \Maatwebsite\Excel\Excel::CSV); // PARA CSV  // ojo para csv tener presente ésta forma
         // return (new InvoiceExport())->download(); // REFACTORIZADO
         // return new InvoiceExport(); // REFACTORIZADO II
 
+
+        return $export;
     }
+
 }
