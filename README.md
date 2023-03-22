@@ -30,19 +30,19 @@
 
 -   [Primeros pasos](#getting_started)
 -   [Uso](#usage)
--   [Contributing](../CONTRIBUTING.md)
--   [Authors](#authors)
+-   [Contribución](../CONTRIBUTING.md)
+-   [Autor](#authors)
 
 ## 🏁 Primeros pasos <a name = "getting_started"></a>
 
 Seguir los siguientes pasos para levantar el proyecto
 
-### Prerrequisitos
+### Prerequisitos
 
 es necesario conocer del stack TALL en nivel básico
 
 ```
-laravel new reportes
+laravel new reportes-excel
 ```
 
 ### Instalar
@@ -55,9 +55,14 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel
 
 ## 🎈 Uso <a name="usage"></a>
 
-# Crear tu base de datos
+-   Crear tu base de datos
+    Cambiar el driver de local a public
 
+```
 # FILESYSTEM_DISK=public
+```
+
+En el terminal
 
 ```
 composer install
@@ -71,7 +76,7 @@ npm run dev
 
 ## ✍️ Authors <a name = "authors"></a>
 
--   [@cybert22](https://gitlab.com/cybert22) - Idea & Initial work
+-   [@cybert22](https://gitlab.com/cybert22) - Programando o debbugeando
 
 See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
 
