@@ -35,11 +35,11 @@
 
 ## 🏁 Primeros pasos <a name = "getting_started"></a>
 
-Seguir los siguientes pasos para levantar el proyecto
+-   Seguir los siguientes pasos para levantar el proyecto
 
 ### Prerequisitos
 
-es necesario conocer del stack TALL en nivel básico
+-   es necesario conocer del stack TALL en nivel básico
 
 ```
 laravel new reportes-excel
@@ -47,7 +47,7 @@ laravel new reportes-excel
 
 ### Instalar
 
-Seguir los siquientes pasos consecutivos
+-   Seguir los siquientes pasos consecutivos
 
 ```
 git clone https://gitlab.com/backend-laravel2/reportes-excel
@@ -56,13 +56,13 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel
 ## 🎈 Uso <a name="usage"></a>
 
 -   Crear tu base de datos
-    Cambiar el driver de local a public
+-   Cambiar el driver de local a public
 
 ```
 # FILESYSTEM_DISK=public
 ```
 
-En el terminal
+-   En el terminal
 
 ```
 composer install
@@ -74,7 +74,7 @@ php artisan serve
 npm run dev
 ```
 
-## ✍️ Authors <a name = "authors"></a>
+## ✍️ Autor <a name = "authors"></a>
 
 -   [@cybert22](https://gitlab.com/cybert22) - Programando o debbugeando
 
