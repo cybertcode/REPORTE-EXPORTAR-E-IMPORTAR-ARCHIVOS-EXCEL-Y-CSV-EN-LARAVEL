@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\InvoiceController;
+use App\Imports\InvoiceImport;
 use Illuminate\Support\Facades\Route;
+use Maatwebsite\Excel\Facades\Excel;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +23,21 @@ Route::get('/', function () {
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified'
+    'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('invoice/export', [InvoiceController::class, 'export'])->name('invoice.export');
+    Route::get('invoice/import', [InvoiceController::class, 'import'])->name('invoice.import');
+    Route::post('invoice/import', [InvoiceController::class, 'importStore'])->name('invoice.importStore');
+    Route::get('prueba', function () {
+        return Excel::toCollection(new InvoiceImport, 'csv/test.csv');
+        // return Excel::toCollection(new InvoiceImport, $file); //para verificar que tipo de datos nos trae y su presentación
+    });
+
 });

@@ -11,8 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('envoices', function (Blueprint $table) {
+        Schema::create('invoices', function (Blueprint $table) {
             $table->id();
+            $table->string('serie');
+            $table->integer('correlative');
+            $table->float('base');
+            $table->float('igv');
+            $table->float('total');
+            // Relación con User
+            $table->foreignId('user_id')->constrained();
+
             $table->timestamps();
         });
     }
@@ -22,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('envoices');
+        Schema::dropIfExists('invoices');
     }
 };
