@@ -33,7 +33,7 @@
     -   [:dart: Prerrequisitos ](#dart-prerrequisitos-)
     -   [🚀 Instalar ](#-instalar-)
     -   [🎈 Uso ](#-uso-)
--   [✍️ Autor ](#️-autor-)
+-   [✍️ Desarrollador](#️-desarrollador)
 
 ## 🏁 Primeros pasos <a name="-primeros-pasos-"></a>
 
@@ -95,7 +95,7 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
     -   Correo: **admin@admin.com**
     -   Contraseña: **admin123**
 
-## ✍️ Autor <a name="-autor-"></a>
+## ✍️ Desarrollador<a name="desarrollador"></a>
 
 <div  align="center">
 
