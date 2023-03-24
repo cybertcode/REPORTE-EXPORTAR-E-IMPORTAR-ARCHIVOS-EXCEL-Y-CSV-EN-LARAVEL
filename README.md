@@ -7,20 +7,20 @@
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-## :point_right: Descripción del proyecto <a id="" name = "point_right-descripción-del-proyecto-"></a>
+## :point_right: Descripción del proyecto <a name="point_right-descripción-del-proyecto-"></a>
 
 <p>El proyecto consiste en listar, fitros dinámicos, importar e exportar archivos Excel y CSV. Está desarrollado con el STACK TALL(Tailwindcss - Alpine.js - Livewire - Laravel )
+
+## 🥇 DEMO 🥇 <a name="-demo--"></a>
+
 </p>
 </div>
+
 <div align="center">
 <p align="center">
   <a href="" rel="noopener">
  <img width=900px  src="./demo.gif" alt="Project logo"></a>
 </p>
-
-## 🥇 DEMO 🥇 <a id="" name = "-demo--"></a>
-
-</br>
 </div>
 
 ---
@@ -35,17 +35,17 @@
     -   [🎈 Uso ](#-uso-)
 -   [✍️ Autor ](#️-autor-)
 
-## 🏁 Primeros pasos <a id="" name = "-primeros-pasos-"></a>
+## 🏁 Primeros pasos <a name="-primeros-pasos-"></a>
 
 Seguir los sucesivamente para levantar el proyecto en su servidor local.
 
-### :dart: Prerrequisitos <a id="" name = "dart-prerrequisitos-"></a>
+### :dart: Prerrequisitos <a name="dart-prerrequisitos-"></a>
 
 -   Es necesario conocer del stack TALL en nivel básico
 -   Editor de código
 -   Muchas ganas de seguir aprendiendo 👍
 
-### 🚀 Instalar <a id="" name = "-instalar-"></a>
+### 🚀 Instalar <a name="-instalar-"></a>
 
 Seguir los siquientes pasos consecutivos
 
@@ -95,7 +95,7 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
     -   Correo: **admin@admin.com**
     -   Contraseña: **admin123**
 
-## ✍️ Autor <a  name = "-autor-" ></a>
+## ✍️ Autor <a  name="-autor-"></a>
 
 <div  align="center">
 
