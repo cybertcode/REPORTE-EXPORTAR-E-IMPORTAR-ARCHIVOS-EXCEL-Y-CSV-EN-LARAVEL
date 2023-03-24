@@ -95,7 +95,7 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
     -   Correo: **admin@admin.com**
     -   Contraseña: **admin123**
 
-## ✍️ Autor <a id = "-autor-" name = "-autor-" ></a>
+## ✍️ Autor <a  name = "-autor-" ></a>
 
 <div  align="center">
 
