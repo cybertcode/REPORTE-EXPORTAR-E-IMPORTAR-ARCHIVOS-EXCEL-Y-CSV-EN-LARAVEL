@@ -9,7 +9,7 @@
 
 ## :point_right: Descripción del proyecto <a name="point_right-descripción-del-proyecto-"></a>
 
-<p>El proyecto consiste en listar, fitros dinámicos, importar e exportar archivos Excel y CSV. Está desarrollado con el STACK TALL(Tailwindcss - Alpine.js - Livewire - Laravel )
+<p>El proyecto consiste en: listar, fitros dinámicos, importar y exportar archivos Excel y CSV. Está desarrollado con el STACK TALL(Tailwindcss - Alpine.js - Livewire - Laravel )
 
 ## 🥇 DEMO 🥇 <a name="-demo--"></a>
 
@@ -33,7 +33,7 @@
     -   [:dart: Prerrequisitos ](#dart-prerrequisitos-)
     -   [🚀 Instalar ](#-instalar-)
     -   [🎈 Uso ](#-uso-)
--   [✍️ Autor ](#️-autor-)
+-   [👨‍💻 Desarrollador](#-desarrollador)
 
 ## 🏁 Primeros pasos <a name="-primeros-pasos-"></a>
 
@@ -95,7 +95,7 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
     -   Correo: **admin@admin.com**
     -   Contraseña: **admin123**
 
-## ✍️ Autor <a  name="-autor-"></a>
+## 👨‍💻 Desarrollador<a name="desarrollador"></a>
 
 <div  align="center">
 
@@ -106,7 +106,7 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
 <p align="center">
   <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="20px"> Mis redes sociales :<br/><br/>
     <a href="https://www.linkedin.com/in/marvyn-kevyn-huanca-hilario-a12699b7/"><img src="https://img.shields.io/badge/linkedin-0077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-    <a href="https://www.instagram.com/mkevynhh"><img src="https://img.shields.io/badge/facebook-1D4292.svg?style=for-the-badge&logo=facebook&logoColor=white"/></a>
+    <a href="https://www.facebook.com/profile.php?id=100047330599374"><img src="https://img.shields.io/badge/facebook-1D4292.svg?style=for-the-badge&logo=facebook&logoColor=white"/></a>
     <a href="https://gitlab.com/cybert22"><img src="https://img.shields.io/badge/gitlab-1D4292.svg?style=for-the-badge&logo=gitlab"/></a>
     <a href="https://www.instagram.com/mkevynhh"><img src="https://img.shields.io/badge/instagram-E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white"/></a>
     <a href="https://www.twitch.tv/cybert22"><img src="https://img.shields.io/badge/twitch-9146FF.svg?style=for-the-badge&logo=twitch&logoColor=white"/></a>
@@ -118,7 +118,9 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
 ---
 
 </br>
-<p align="center"> © 2022 Cybertcode, todos los derechos Reservados. Hecho con ❤️ para una web mejor. </p>
+<div align="center">
+<p align="center"> © 2023 Cybertcode, todos los derechos Reservados. Hecho con mucho ❤️ . </p>
 <p align="center">
 https://www.cybertcode.com
 </p>
+</div>
