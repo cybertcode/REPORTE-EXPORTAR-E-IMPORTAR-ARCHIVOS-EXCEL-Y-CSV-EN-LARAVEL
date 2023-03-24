@@ -9,7 +9,7 @@
 
 ## :point_right: Descripción del proyecto <a name="point_right-descripción-del-proyecto-"></a>
 
-<p>El proyecto consiste en listar, fitros dinámicos, importar e exportar archivos Excel y CSV. Está desarrollado con el STACK TALL(Tailwindcss - Alpine.js - Livewire - Laravel )
+<p>El proyecto consiste en: listar, fitros dinámicos, importar y exportar archivos Excel y CSV. Está desarrollado con el STACK TALL(Tailwindcss - Alpine.js - Livewire - Laravel )
 
 ## 🥇 DEMO 🥇 <a name="-demo--"></a>
 
@@ -95,7 +95,7 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
     -   Correo: **admin@admin.com**
     -   Contraseña: **admin123**
 
-## ✍️ Autor <a  name="-autor-"></a>
+## ✍️ Autor <a name="-autor-"></a>
 
 <div  align="center">
 
@@ -118,7 +118,9 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
 ---
 
 </br>
-<p align="center"> © 2022 Cybertcode, todos los derechos Reservados. Hecho con ❤️ para una web mejor. </p>
+<div align="center">
+<p align="center"> © 2023 Cybertcode, todos los derechos Reservados. Hecho con mucho ❤️ . </p>
 <p align="center">
 https://www.cybertcode.com
 </p>
+</div>
