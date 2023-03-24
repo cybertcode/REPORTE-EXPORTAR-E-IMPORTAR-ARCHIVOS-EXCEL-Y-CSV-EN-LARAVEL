@@ -15,7 +15,7 @@
 <div align="center">
 <p align="center">
   <a href="" rel="noopener">
- <img width=900px  src="./filtros.png" alt="Project logo"></a>
+ <img width=900px  src="./demo.gif" alt="Project logo"></a>
 </p>
 
 ## 🥇 DEMO 🥇 <a name = "demo"></a>
@@ -92,6 +92,9 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
     ```
 -   Para practicar
     -   Dentro de la carpeta pública/img existe los archivos Excel y CSV
+-   Datos de acceso
+    -   Correo: **admin@admin.com**
+    -   Contraseña: **admin123**
 
 ## ✍️ Autor <a name = "autor"></a>
 
