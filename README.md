@@ -18,8 +18,8 @@
 
 <div align="center">
 <p align="center">
-  <a href="" rel="noopener">
- <img width=900px  src="./demo.gif" alt="Project logo"></a>
+  <a href="" rel="demo">
+ <img width=900px  src="./demo.gif" alt="demo"></a>
 </p>
 </div>
 
@@ -27,13 +27,13 @@
 
 <h2> 📝 Tabla de contenido </h2>
 
--   [:point_right: Descripción del proyecto ](#point_right-descripción-del-proyecto-)
--   [🥇 DEMO 🥇 ](#-demo--)
--   [🏁 Primeros pasos ](#-primeros-pasos-)
-    -   [:dart: Prerrequisitos ](#dart-prerrequisitos-)
-    -   [🚀 Instalar ](#-instalar-)
-    -   [🎈 Uso ](#-uso-)
--   [👨‍💻 Desarrollador](#-desarrollador)
+- [:point\_right: Descripción del proyecto ](#point_right-descripción-del-proyecto-)
+- [🥇 DEMO 🥇 ](#-demo--)
+- [🏁 Primeros pasos ](#-primeros-pasos-)
+  - [:dart: Prerrequisitos ](#dart-prerrequisitos-)
+  - [🚀 Clonar ](#-clonar-)
+  - [🎈 Uso ](#-uso-)
+- [👨‍💻 Desarrollador](#-desarrollador)
 
 ## 🏁 Primeros pasos <a name="-primeros-pasos-"></a>
 
@@ -45,12 +45,12 @@ Seguir los sucesivamente para levantar el proyecto en su servidor local.
 -   Editor de código
 -   Muchas ganas de seguir aprendiendo 👍
 
-### 🚀 Instalar <a name="-instalar-"></a>
+### 🚀 Clonar <a name="-clonar-"></a>
 
 Seguir los siquientes pasos consecutivos
 
 ```
-git clone https://gitlab.com/backend-laravel2/reportes-excel.git
+https://github.com/cybertcode/REPORTE-EXPORTAR-E-IMPORTAR-ARCHIVOS-EXCEL-Y-CSV-EN-LARAVEL.git
 ```
 
 ### 🎈 Uso <a name="-uso-"></a>
@@ -72,7 +72,7 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
     DB_PASSWORD=
     ```
 
--   Cambiar el driver de local a public
+-   Cambiar el driver de local a public en el archivo .env
 
     ```
     # FILESYSTEM_DISK=public
@@ -83,6 +83,7 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
     php artisan migrate
     php artisan db:seed
     php artisan serve
+    npm install
     npm run dev
     ```
 -   Opcional en el terminal
@@ -91,7 +92,7 @@ git clone https://gitlab.com/backend-laravel2/reportes-excel.git
     ```
 -   Para practicar
     -   Dentro de la carpeta pública/img existe los archivos Excel y CSV
--   Datos de acceso
+    -   Datos de acceso
     -   Correo: **admin@admin.com**
     -   Contraseña: **admin123**
 
