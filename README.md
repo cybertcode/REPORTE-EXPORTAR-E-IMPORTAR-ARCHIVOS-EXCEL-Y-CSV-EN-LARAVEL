@@ -7,7 +7,7 @@
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-## :point_right: Descripción del proyecto <a name="point_right-descripción-del-proyecto-"></a>
+## 📖 Descripción del proyecto <a name="-descripción-del-proyecto-"></a>
 
 <p>El proyecto consiste en: listar, fitros dinámicos, importar y exportar archivos Excel y CSV. Está desarrollado con el STACK TALL(Tailwindcss - Alpine.js - Livewire - Laravel )
 
@@ -25,36 +25,46 @@
 
 ---
 
-<h2> 📝 Tabla de contenido </h2>
+<h2> 📝 <strong>Tabla de contenido</strong> </h2>
 
-- [:point\_right: Descripción del proyecto ](#point_right-descripción-del-proyecto-)
+- [📖 Descripción del proyecto ](#-descripción-del-proyecto-)
 - [🥇 DEMO 🥇 ](#-demo--)
-- [🏁 Primeros pasos ](#-primeros-pasos-)
-  - [:dart: Prerrequisitos ](#dart-prerrequisitos-)
-  - [🚀 Clonar ](#-clonar-)
-  - [🎈 Uso ](#-uso-)
-- [👨‍💻 Desarrollador](#-desarrollador)
+- [🏁 **Requerimientos** ](#-requerimientos-)
+- [🏅 **Tecnologías utilizados** ](#-tecnologías-utilizados-)
+- [🚀 **Clonar** ](#-clonar-)
+- [🖥️ **Uso** ](#️-uso-)
+- [👨‍💻 **Desarrollador**](#-desarrollador)
 
-## 🏁 Primeros pasos <a name="-primeros-pasos-"></a>
+## 🏁 **Requerimientos** <a name="-requerimientos-"></a>
 
-Seguir los sucesivamente para levantar el proyecto en su servidor local.
+-   Para correr la aplicación localmente, necesitarás tener instalado lo siguiente en tu máquina:
 
-### :dart: Prerrequisitos <a name="dart-prerrequisitos-"></a>
+    -   PHP versión 8.1 o superior
+    -   Composer
+    -   MySQL
+    -   Node
+    -   Un servidor web (por ejemplo, Apache o Nginx
 
--   Es necesario conocer del stack TALL en nivel básico
--   Editor de código
--   Muchas ganas de seguir aprendiendo 👍
+## 🏅 **Tecnologías utilizados** <a name="-tecnologías-utilizados-"></a>
 
-### 🚀 Clonar <a name="-clonar-"></a>
+-   `PHP` - Lenguaje de programación utilizado por Laravel.
+-   `Laravel` - Framework PHP utilizado para desarrollar la aplicación.
+-   `Livewire` - Biblioteca de Laravel para crear componentes de interfaces de usuario.
+-   `Alpine.js` - Framework JavaScript para crear interactividad en el front-end.
+-   `Tailwind CSS` - Framework CSS utilizado para el diseño de la interfaz.
+-   `maatwebsite/excel` - Biblioteca de Laravel para gestionar archivos excel.
 
-Seguir los siquientes pasos consecutivos
+## 🚀 **Clonar** <a name="-clonar-"></a>
 
-```
-https://github.com/cybertcode/REPORTE-EXPORTAR-E-IMPORTAR-ARCHIVOS-EXCEL-Y-CSV-EN-LARAVEL.git
-```
+-   Clonar el repositorio
 
-### 🎈 Uso <a name="-uso-"></a>
+    ```
+    https://github.com/cybertcode/REPORTE-EXPORTAR-E-IMPORTAR-ARCHIVOS-EXCEL-Y-CSV-EN-LARAVEL.git
+    ```
 
+## 🖥️ **Uso** <a name="-uso-"></a>
+
+-   Ubicarse en el directorio del proyecto clonado
 -   En el terminal
 
     ```
@@ -63,40 +73,44 @@ https://github.com/cybertcode/REPORTE-EXPORTAR-E-IMPORTAR-ARCHIVOS-EXCEL-Y-CSV-E
     php artisan key:generate
     ```
 
--   Crear tu base de datos
--   Cambiar los datos de usuario
+-   **Crear tu base de datos**
 
-    ```
-    DB_DATABASE=reportes-excel
-    DB_USERNAME=root
-    DB_PASSWORD=
-    ```
+    -   Configurar en el archivo .env
 
--   Cambiar el driver de local a public en el archivo .env
+        ```
+        DB_DATABASE=reportes-excel
+        DB_USERNAME=root
+        DB_PASSWORD=
+        ```
 
-    ```
-    # FILESYSTEM_DISK=public
-    ```
+    -   Cambiar el driver de local a public en el archivo .env
 
--   En el terminal
-    ```
-    php artisan migrate
-    php artisan db:seed
-    php artisan serve
-    npm install
-    npm run dev
-    ```
--   Opcional en el terminal
-    ```
-      php artisan storage:link
-    ```
--   Para practicar
+        ```
+        # FILESYSTEM_DISK=public
+        ```
+
+    -   En el terminal
+
+        ```
+        php artisan migrate
+        php artisan db:seed
+        php artisan serve
+        npm install
+        npm run dev
+        ```
+
+    -   Opcional en el terminal
+        ```
+          php artisan storage:link
+        ```
+
+-   😎 **Para practicar**
     -   Dentro de la carpeta pública/img existe los archivos Excel y CSV
-    -   Datos de acceso
+-   🔑 **Datos de acceso**
     -   Correo: **admin@admin.com**
     -   Contraseña: **admin123**
 
-## 👨‍💻 Desarrollador<a name="desarrollador"></a>
+## 👨‍💻 **Desarrollador**<a name="-desarrollador"></a>
 
 <div  align="center">
 
